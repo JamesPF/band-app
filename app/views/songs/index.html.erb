@@ -1,0 +1,32 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="../../assets/stylesheets/backend-style.css" >
+</head>
+<body>
+<%= link_to "Log Out", logout_path %>
+  <h1>Manage Your Songs</h1>
+  <div class="page-contents">
+    <div class="new-entry">
+      <%= link_to "Add New Track", addsong_path %>
+    </div>
+    <div class="nav-button">
+      <%= link_to 'Edit News Posts', posts_path %>
+    </div>
+    <div class="song-list">
+      <table>
+      <thead>
+        <tr>
+        <th>Title</th>
+        </tr>
+        </thead>
+        <% @song.each do |song| %>
+        <tr>
+        <td><%= song.title.truncate(50) %></td>
+          <td><%= link_to 'Edit', edit_song_path(song) %></td>
+          <td><%= link_to 'Delete', delete_song_path(song), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      </table>
+    </div>
+  </div>
+
+</body>

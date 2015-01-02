@@ -28,19 +28,17 @@
     <div class="container">
       <div class="news-content">
         <h1>Latest News</h1>
-              <div class="post-list">
-
-          <%@post.each do |post| %>
-                    <div class="news-post">
-          <%= post.date %>
-          <%= post.title %>
-                    <br>
-          <%= post.body %>
+        <div class="post-list">
+          <% @post.each do |post| %>
+            <div class="news-post">
+              <%= post.date %>
+              <%= post.title %>
+              <br>
+              <%= post.body %>
             </div>
-                    <br><br>
-        <% end %>
-
-           </div>
+            <br><br>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

@@ -1,0 +1,22 @@
+<%= link_to "Log Out", logout_path %>
+<h1>Add a Track</h1>
+
+<div class="page-contents">
+  <div class="back-button">
+    <%= link_to 'Back to Tracks', songs_path %>
+  </div>
+    <%= form_for(@song, :url => {:action => :create, :controller => :songs}) do |s| %>
+    <div class="field">
+      <%= s.label :title %><br>
+      <%= s.text_field :title, placeholder: 'Title' %>
+    </div>
+    <div class="field">
+      <%= s.label :code %><br>
+      <%= s.text_area :code %>
+    </div>
+    <br>
+    <div class="actions">
+      <%= s.submit "Add Track" %>
+    </div>
+  <% end %>
+</div>

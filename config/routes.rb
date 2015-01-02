@@ -19,7 +19,7 @@ BandApp::Application.routes.draw do
   patch 'tourdates/:id' => 'tourdates#update', as: :update_tourdate
   delete 'tourdates/:id' => 'tourdates#destroy', as: :delete_tourdate
 
-    # These routes are for news posts
+  # These routes are for news posts
   get 'posts/' => 'posts#index', as: :posts
   get 'posts/new' => 'posts#new', as: :addpost
   get 'posts/:id' => 'posts#show', as: :post
@@ -28,14 +28,22 @@ BandApp::Application.routes.draw do
   patch 'posts/:id' => 'posts#update', as: :update_post
   delete 'posts/:id' => 'posts#destroy', as: :delete_post
 
+  # These routes are for uploading music
+  get 'songs/' => 'songs#index', as: :songs
+  get 'songs/new' => 'songs#new', as: :addsong
+  post 'songs/' => 'songs#create', as: :new_song
+  get 'songs/:id/edit' => 'songs#edit', as: :edit_song
+  patch 'songs/:id' => 'songs#update', as: :update_song
+  delete 'songs/:id' => 'songs#destroy', as: :delete_song
+
   #These routes determine the front end
   root 'application#index'
   get 'about/' => 'application#about', as: :about
-  get 'music/' => 'application#music', as: :music
   get 'video/' => 'application#video', as: :video
   get 'photos/' => 'application#photos', as: :photos
   #For News and Shows
-  get 'news/index' => 'news#index', as: :news
-  get 'shows/index' => 'shows#index', as: :shows
+  get 'news/' => 'news#index', as: :news
+  get 'shows/' => 'shows#index', as: :shows
+  get 'music/' => 'music#index', as: :music
 
 end

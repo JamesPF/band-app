@@ -22,10 +22,6 @@ class TourdatesController < ApplicationController
     end
   end
 
-  def tourdate_params
-    params.require(:tourdate).permit(:date, :city, :venue, :time)
-  end
-
   def edit
     @tourdate = Tourdate.find(params[:id])
   end
@@ -43,6 +39,10 @@ class TourdatesController < ApplicationController
     @tourdate = Tourdate.find(params[:id])
     @tourdate.destroy
     redirect_to tourdates_path
+  end
+
+  def tourdate_params
+    params.require(:tourdate).permit(:date, :city, :venue, :time)
   end
 
 end
