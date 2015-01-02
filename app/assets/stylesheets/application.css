@@ -1,0 +1,454 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+.wrapper {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: orange;
+  margin-left: -8px;
+  margin-top: -8px;
+}
+
+.header {
+    position: relative;
+    height: 120px;
+    width: 100%;
+    background-color: black;
+}
+
+.logo {
+    position: absolute;
+    height: 100px;
+    width: 440px;
+    background-color: green;
+    margin-top: 10px;
+    margin-left: 10px;
+}
+
+.nav-social {
+    position: relative;
+    height: 100px;
+    width: 40%;
+    background-color: purple;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.social-icons {
+  position: relative;
+  height: 30px;
+  width: 160px;
+  background-color: yellow;
+    float: right;
+}
+
+.navigation {
+  position: relative;
+  height: 40px;
+  width: 100%;
+  background-color: pink;
+  margin-top: 60px;
+}
+
+.navigation ul {
+  list-style: none;
+  margin-left: -40px;
+  padding-top: 8px;
+}
+
+.navigation ul li {
+  display: inline;
+  background-color: gray;
+  margin-right: 0px;
+  font-size: 26px;
+  font-family: Arial;
+  padding-left: 5px;
+  padding-right: 5px;  
+}
+
+a, a:visited, a:hover, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+.container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: blue;
+}
+
+.content {
+    position: relative;
+    height: 500px;
+    width: 70%;
+    background-color: red;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.news-content {
+    position: relative;
+    height: 500px;
+    width: 60%;
+    background-color: red;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.news-post {
+    background-color: orange;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.tour-dates {
+    position: relative;
+    height: 500px;
+    width: 40%;
+    background-color: red;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.tour-dates h1 {
+    padding-top: 10px;
+}
+
+.tour-dates table {
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+/* THE FOLLOWING IS FOR THE ADMIN
+PAGES OF THE WEBSITE */
+h1 {
+  text-align: center;
+  font-family: Arial;
+}
+
+.page-contents {
+  background-color: orange;
+  width: 50%;
+  height: 75%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.new-entry {
+  position: absolute;
+  font-family: Arial;
+  padding-bottom: 5px;
+  padding-left: 8px;
+  padding-top: 5px;
+}
+
+.nav-button {
+  position: relative;
+  float: right;
+  font-family: Arial;
+  padding-bottom: 5px;
+  padding-right: 8px;
+  padding-top: 5px;
+}
+
+.page-contents table {
+  background-color: red;
+  position: relative;
+  width: 100%;
+  margin-top: 10px;
+  border-bottom-right-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.page-contents table th {
+  text-align: left;
+}
+
+.page-contents p {
+  margin: 10px;
+  padding-top: 5px;
+}
+
+.field {
+  padding-left: 10px;
+  padding-top: 5px;
+}
+
+.text-area {
+  position: relative;
+  width: 75%;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.actions {
+  padding-left: 10px;
+  padding-bottom: 10px;
+  margin-top: -7px;
+}
+
+.back-button {
+  float: right;
+  padding-right: 8px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-family: Arial;
+}
+
+
+.options {
+  background-color: green;
+  width: 40%;
+  margin: 0 auto;
+  border-radius: 5%;
+}
+
+.left {
+  background-color: orange;
+  width: 40%;
+  float: left;
+}
+
+.left p {
+  font-family: Arial;
+  font-size: 30px;
+  text-align: center;
+}
+
+.right {
+  background-color: orange;
+  width: 40%;
+  float: right;
+}
+
+.right p {
+  font-family: Arial;
+  font-size: 30px;
+  text-align: center;
+}
+
+.login-info {
+  background-color: orange;
+  width: 15%;
+  height: 75%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.login-info .field {
+    margin: 0 auto;
+}
+
+.login-info .actions {
+  margin-top: 15px;
+}
+
+
+
+/* MEDIA QUERIES BEGIN HERE */
+/* THE FIRST SEVERAL... UP UNTIL IPADS... ARE FOR BREAKPOINTS FOR THE HEADER */
+
+@media (max-width: 1280px) {
+    .navigation ul li {
+        font-size: 24px;
+    }
+}
+
+@media (max-width: 1205px) {
+    .navigation ul li {
+        font-size: 22px;
+    }
+}
+
+@media (max-width: 1125px) {
+    .navigation ul li {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .nav-social {
+        width: 47%;
+    }
+    .navigation ul li {
+        padding-left: 2px;
+        padding-right: 2px;
+        margin-right: 0px;
+    }
+}
+
+@media (max-width: 892px) {
+    .nav-social {
+        width: 47%;
+    }
+    .navigation ul li {
+        margin-right: 0px;
+        padding-left: 1px;
+        padding-right: 1px;
+    }
+
+    .logo {
+        width: 385px;
+        height: 88px;
+    }
+}
+
+/* FOR IPADS */
+@media (max-width: 768px) {
+    .header {
+        background-color: white;
+    }
+
+    .logo {
+        height: 75px;
+        width: 330px;
+    }
+
+    .nav-social {
+        width: 400px;
+    }
+
+    .navigation {
+        width: 100%;
+    }
+
+    .navigation ul li {
+        font-size: 20px;
+        padding-left: 2px;
+        padding-right: 2px;
+        margin-right: 4px;
+    }
+
+}
+
+/* FOR SMALL TABLETS */
+@media (min-width: 481px) and (max-width: 767px) {
+    .header {
+        background-color: orangered;
+        height: 450px;
+        margin-top: -60px;
+    }
+
+    .logo {
+        position: absolute;
+        margin-top: 70px;
+        margin-left: 20%;
+        margin-right: 20%;
+        width: 60%;
+        height: 100px;
+    }
+
+    .nav-social {
+        position: absolute;
+        width: 90%;
+        height: 185px;
+        float: none;
+        margin-top: 190px;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+
+    .navigation {
+        width: 100%;
+        height: 100%;
+    }
+
+    .navigation ul {
+        list-style: none;
+        margin-left: -30px;
+        padding-top: 8px;
+    }
+
+    .navigation ul li {
+        display: block;
+        background-color: gray;
+        margin-right: 20px;
+        font-size: 20px;
+        font-family: Arial;
+        padding-left: 5px;
+        padding-right: 5px;
+        padding-top: 5px;
+    }
+
+    .content {
+        position: relative; 
+        width: 90%;
+    }
+
+}
+
+/*--- FOR IPHONE AND OTHER SMART PHONES --- */
+@media (max-width: 480px) {
+    .header {
+      background-color: salmon;
+      height: 420px;
+      margin-top: -60px;
+    }
+
+    .logo {
+      position: absolute;
+      margin-top: 70px;
+        margin-left: 10%;
+        margin-right: 10%;
+      width: 320px;
+    }
+
+    .nav-social {
+      position: absolute;
+      width: 80%;
+      height: 185px;
+      float: none;
+      margin-top: 170px;
+      margin-left: 10%;
+      margin-right: 10%;
+    }
+
+    .navigation {
+      width: 100%;
+      height: 100%;
+    }
+
+    .navigation ul {
+    list-style: none;
+    margin-left: -30px;
+    padding-top: 8px;
+    }
+
+    .navigation ul li {
+    display: block;
+    background-color: gray;
+    margin-right: 20px;
+    font-size: 20px;
+    font-family: Arial;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    }
+
+    .content {
+      position: relative; 
+      width: 80%;
+    }
+
+}

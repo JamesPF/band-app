@@ -1,0 +1,36 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="../../assets/stylesheets/backend-style.css" >
+</head>
+<body>
+<%= link_to "Log Out", logout_path %>
+  <h1>Edit Your Posts</h1>
+  <div class="page-contents">
+    <div class="new-entry">
+          <%= link_to 'Create New Post', addpost_path %>
+      </div>
+      <div class="nav-button">
+          <%= link_to 'Edit Shows', tourdates_path %>
+      </div>
+      <div class="post-list">
+      <table>
+      <thead>
+        <tr>
+        <th>Date</th>
+        <th>Title</th>
+        <th>Content</th>
+        </tr>
+        </thead>
+        <%@post.each do |post| %>
+        <tr>
+        <td><%= post.date %></td>
+        <td><%= post.title.truncate(50) %></td>
+        <td><%= post.body.truncate(25) %></td>
+        <td><%= link_to 'Show', post_path(post) %></td>
+          <td><%= link_to 'Edit', edit_post_path(post) %></td>
+          <td><%= link_to 'Delete', delete_post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      </table>
+      </div>
+  </div>
+</body>

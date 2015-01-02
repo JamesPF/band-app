@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<head>
+  <title>Project 2</title>
+  <link rel="stylesheet" style="text/css" href="../../assets/stylesheets/style.css" >
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <%= link_to(root_path) do %>
+        <div class="logo">
+        </div>
+        <% end %>
+      <div class="nav-social">
+        <div class="social-icons">
+        </div>
+        <div class="navigation">
+          <ul>
+            <li><a href="../../views/application/about.html.erb">About</a></li>
+            <li><%= link_to "News", news_path %></li>
+            <li><%= link_to "Shows", shows_path %></li>
+            <li><a href="../../views/application/music.html.erb">Music</a></li>
+            <li><a href="../../views/application/video.html.erb">Video</a></li>
+            <li><a href="../../views/application/photos.html.erb">Photos</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="content">
+
+      </div>
+    </div>
+  </div>
+</body>
+</html>

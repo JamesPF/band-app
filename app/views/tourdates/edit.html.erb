@@ -1,0 +1,31 @@
+<%= link_to "Log Out", logout_path %>
+<h1>Editing Show</h1>
+
+<div class="page-contents">
+  <div class="back-button">
+    <%= link_to 'Back to Shows', tourdates_path %>
+  </div>
+    <%= form_for(@tourdate, :url => {:action => :update, :controller => :tourdates}) do |f| %>
+    <div class="field">
+      <%= f.label :date %><br>
+      <%= f.text_field :date, placeholder: 'DD/MM/YY' %>
+    </div>
+    <div class="field">
+      <%= f.label :city %><br>
+      <%= f.text_field :city %>
+    </div>
+    <div class="field">
+      <%= f.label :venue %><br>
+      <%= f.text_field :venue %>
+    </div>
+    <div class="field">
+      <%= f.label :time %><br>
+      <%= f.text_field :time %>
+    </div>
+    <br>
+    <div class="actions">
+      <%= f.submit "Update Show" %>
+    </div>
+  <% end %>
+
+</div>

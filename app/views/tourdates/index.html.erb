@@ -1,0 +1,40 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="../../assets/stylesheets/backend-style.css" >
+</head>
+<body>
+<%= link_to "Log Out", logout_path %>
+  <h1>Edit Your Shows</h1>
+  <div class="page-contents">
+      <div class="new-entry">
+      <%= link_to "Create New Show", new_path %>
+    </div>
+    <div class="nav-button">
+      <%= link_to 'Edit News Posts', posts_path %>
+    </div>
+
+    <div class="date-list">
+      <table>
+      <thead>
+        <tr>
+         <th>Date</th>
+         <th>City</th>
+         <th>Venue</th>
+         <th>Time</th>
+        </tr>
+      </thead>
+      <%@tourdate.each do |tourdate| %>
+         <tr>
+         <td><%= tourdate.date %></td>
+         <td><%= tourdate.city %></td>
+         <td><%= tourdate.venue %></td>
+         <td><%= tourdate.time %></td>
+         <td><%= link_to 'Show', tourdate_path(tourdate) %></td>
+         <td><%= link_to 'Edit', edit_tourdate_path(tourdate) %></td>
+         <td><%= link_to 'Delete', delete_tourdate_path(tourdate), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+         </tr>
+      <% end %>
+      </table>
+    </div>
+  </div>
+
+</body>

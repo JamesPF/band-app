@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<head>
+  <title>Project 2</title>
+  <link rel="stylesheet" style="text/css" href="../../assets/stylesheets/style.css" >
+</head>
+<body>
+  <div class="wrapper">
+    <div class="header">
+      <%= link_to(root_path) do %>
+        <div class="logo">
+        </div>
+        <% end %>
+      <div class="nav-social">
+        <div class="social-icons">
+        </div>
+        <div class="navigation">
+          <ul>
+            <li><%= link_to "About", about_path %></li>
+            <li><%= link_to "News", news_path %></li>
+            <li><%= link_to "Shows", shows_path %></li>
+            <li><%= link_to "Music", music_path %></li>
+            <li><%= link_to "Video", video_path %></li>
+            <li><%= link_to "Photos", photos_path %></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="tour-dates">
+        <h1>Shows</h1>
+          <div class="date-list">
+        <table>
+        <thead>
+          <tr>
+           <th>Date</th>
+           <th>City</th>
+           <th>Venue</th>
+           <th>Time</th>
+          </tr>
+        </thead>
+        <%@tourdate.each do |tourdate| %>
+           <tr>
+           <td><%= tourdate.date %></td>
+           <td><%= tourdate.city %></td>
+           <td><%= tourdate.venue %></td>
+           <td><%= tourdate.time %></td>
+           </tr>
+        <% end %>
+        </table>
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
