@@ -36,6 +36,14 @@ BandApp::Application.routes.draw do
   patch 'songs/:id' => 'songs#update', as: :update_song
   delete 'songs/:id' => 'songs#destroy', as: :delete_song
 
+  # These routes are for uploading videos
+  get 'vids/' => 'vids#index', as: :vids
+  get 'vids/new' => 'vids#new', as: :addvid
+  post 'vids/' => 'vids#create', as: :new_vid
+  get 'vids/:id/edit' => 'vids#edit', as: :edit_vid
+  patch 'vids/:id' => 'vids#update', as: :update_vid
+  delete 'vids/:id' => 'vids#destroy', as: :delete_vid
+
   #These routes determine the front end
   root 'application#index'
   get 'about/' => 'application#about', as: :about

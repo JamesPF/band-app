@@ -22,29 +22,29 @@
 }
 
 .header {
-    position: relative;
-    height: 120px;
-    width: 100%;
-    background-color: black;
+  position: relative;
+  height: 120px;
+  width: 100%;
+  background-color: black;
 }
 
 .logo {
-    position: absolute;
-    height: 100px;
-    width: 440px;
-    background-color: green;
-    margin-top: 10px;
-    margin-left: 10px;
+  position: absolute;
+  height: 100px;
+  width: 440px;
+  background-color: green;
+  margin-top: 10px;
+  margin-left: 10px;
 }
 
 .nav-social {
-    position: relative;
-    height: 100px;
-    width: 40%;
-    background-color: purple;
-    float: right;
-    margin-top: 10px;
-    margin-right: 10px;
+  position: relative;
+  height: 100px;
+  width: 40%;
+  background-color: purple;
+  float: right;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 .social-icons {
@@ -80,62 +80,73 @@
 }
 
 a, a:visited, a:hover, a:active {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .container {
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    background-color: blue;
+  position: absolute;
+  min-height: 100%;
+  width: 100%;
+  background-color: blue;
 }
 
 .content {
-    position: relative;
-    height: 500px;
-    width: 70%;
-    background-color: red;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
+  position: relative;
+  min-height: 500px;
+  width: 70%;
+  background-color: red;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
 }
 
 .news-content {
-    position: relative;
-    height: 500px;
-    width: 60%;
-    background-color: red;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
+  position: relative;
+  height: 500px;
+  width: 60%;
+  background-color: red;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
 }
 
 .news-post {
-    background-color: orange;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+  background-color: orange;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .tour-dates {
-    position: relative;
-    height: 500px;
-    width: 40%;
-    background-color: red;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 30px;
+  position: relative;
+  height: 500px;
+  width: 40%;
+  background-color: red;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30px;
 }
 
 .tour-dates h1 {
-    padding-top: 10px;
+  padding-top: 10px;
 }
 
 .tour-dates table {
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.music-list {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
+
+.track {
+  margin-bottom: 10px;
 }
 
 

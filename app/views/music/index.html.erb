@@ -30,7 +30,9 @@
         <h1>Music</h1>
         <div class="music-list">
           <% @song.each do |song| %>
-            <%= song.code.html_safe %>
+            <div class="track">
+              <%= song.code.html_safe %>
+            </div>
           <% end %>
         </div>
       </div>

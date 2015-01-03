@@ -1,0 +1,22 @@
+<%= link_to "Log Out", logout_path %>
+<h1>Add a Video</h1>
+
+<div class="page-contents">
+  <div class="back-button">
+    <%= link_to 'Back to Videos', vids_path %>
+  </div>
+    <%= form_for(@vid, :url => {:action => :create, :controller => :vids}) do |v| %>
+    <div class="field">
+      <%= v.label :title %><br>
+      <%= v.text_field :title, placeholder: 'Title' %>
+    </div>
+    <div class="field">
+      <%= v.label :link %><br>
+      <%= v.text_area :link %>
+    </div>
+    <br>
+    <div class="actions">
+      <%= v.submit "Add Video" %>
+    </div>
+  <% end %>
+</div>

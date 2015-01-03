@@ -1,0 +1,32 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="../../assets/stylesheets/backend-style.css" >
+</head>
+<body>
+<%= link_to "Log Out", logout_path %>
+  <h1>Manage Your Videos</h1>
+  <div class="page-contents">
+    <div class="new-entry">
+      <%= link_to "Add New Video", addvid_path %>
+    </div>
+    <div class="nav-button">
+      <%= link_to 'Edit News Posts', posts_path %>
+    </div>
+    <div class="vid-list">
+      <table>
+      <thead>
+        <tr>
+        <th>Title</th>
+        </tr>
+        </thead>
+        <% @vid.each do |vid| %>
+        <tr>
+        <td><%= vid.title.truncate(50) %></td>
+          <td><%= link_to 'Edit', edit_vid_path(vid) %></td>
+          <td><%= link_to 'Delete', delete_vid_path(vid), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+      <% end %>
+      </table>
+    </div>
+  </div>
+
+</body>
