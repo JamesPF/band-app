@@ -149,6 +149,26 @@ a, a:visited, a:hover, a:active {
   margin-bottom: 10px;
 }
 
+.video-list {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-bottom: 20px;
+}
+
+.video {
+  margin-bottom: 30px;
+}
+
+.video iframe {
+  display: block;
+  height: 315px;
+  width: 560px;
+  margin-left: auto;
+  margin-right: auto;
+  border: none;
+}
+
 
 
 /* THE FOLLOWING IS FOR THE ADMIN

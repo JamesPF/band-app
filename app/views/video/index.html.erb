@@ -27,6 +27,14 @@
     </div>
     <div class="container">
       <div class="content">
+        <h1>Video</h1>
+        <div class="video-list">
+          <% @vid.each do |vid| %>
+            <div class="video">
+              <%= embed(vid.link) %>
+            </div>
+          <% end %>
+        </div>
       </div>
     </div>
   </div>

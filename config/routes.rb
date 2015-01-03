@@ -47,11 +47,11 @@ BandApp::Application.routes.draw do
   #These routes determine the front end
   root 'application#index'
   get 'about/' => 'application#about', as: :about
-  get 'video/' => 'application#video', as: :video
   get 'photos/' => 'application#photos', as: :photos
   #For News and Shows
   get 'news/' => 'news#index', as: :news
   get 'shows/' => 'shows#index', as: :shows
   get 'music/' => 'music#index', as: :music
+  get 'video/' => 'video#index', as: :video
 
 end
