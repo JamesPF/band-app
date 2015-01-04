@@ -169,6 +169,23 @@ a, a:visited, a:hover, a:active {
   border: none;
 }
 
+#instafeed {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#instafeed img {
+  margin-left: 2.5%;
+  margin-bottom: 20px;
+  width: 30%;
+  height: 30%;
+  opacity: 0.8;
+}
+
+#instafeed img:hover {
+  opacity: 1;
+}
+
 
 
 /* THE FOLLOWING IS FOR THE ADMIN

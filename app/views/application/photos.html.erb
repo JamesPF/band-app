@@ -27,8 +27,23 @@
     </div>
     <div class="container">
       <div class="content">
+        <h1>Photos</h1>
+        <div id="instafeed">
+        </div>
       </div>
     </div>
   </div>
+
+  <script type="text/javascript">
+    var userFeed = new Instafeed({
+        get: 'user',
+        userId: 235120544,
+        accessToken: '235120544.467ede5.9b8b433ff6aa4375ac0c5933fb4c1171',
+        resolution: 'low_resolution',
+        limit: 9
+    });
+    userFeed.run();
+  </script>
+
 </body>
 </html>
