@@ -32,26 +32,31 @@
         <table>
         <thead>
           <tr>
-           <th>Date</th>
-           <th>City</th>
-           <th>Venue</th>
-           <th>Time</th>
-           <th>Map</th>
-           <th>Details</th>
+            <th>Date</th>
+            <th>City</th>
+            <th>Venue</th>
+            <th>Time</th>
+            <th>Map</th>
+            <th>Tickets</th>
           </tr>
         </thead>
         <%@tourdate.each do |tourdate| %>
-           <tr>
-           <td><%= tourdate.date %></td>
-           <td><%= tourdate.city %></td>
-           <td><%= tourdate.venue %></td>
-           <td><%= tourdate.time %></td>
-           <td>
-            <% if tourdate.address != "" %>
-              <%= link_to "Map", ('http://maps.google.com/?q=' + tourdate.address) %>
-            <% end %>
-           </td>
-           </tr>
+          <tr>
+            <td><%= tourdate.date %></td>
+            <td><%= tourdate.city %></td>
+            <td><%= tourdate.venue %></td>
+            <td><%= tourdate.time %></td>
+            <td>
+              <% if tourdate.address != "" %>
+                <%= link_to "Map", ('http://maps.google.com/?q=' + tourdate.address) %>
+              <% end %>
+            </td>
+            <td>
+              <% if tourdate.tickets != "" %>
+                <%= link_to "Tickets", tourdate.tickets %>
+              <% end %>
+            </td>
+          </tr>
         <% end %>
         </table>
           </div>
