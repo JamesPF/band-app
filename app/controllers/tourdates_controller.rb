@@ -28,7 +28,7 @@ class TourdatesController < ApplicationController
 
   def update
     @tourdate = Tourdate.find(params[:id])
-    if @tourdate.update_attributes(params.require(:tourdate).permit(:date, :city, :venue, :time))
+    if @tourdate.update_attributes(params.require(:tourdate).permit(:date, :city, :venue, :time, :address, :tickets))
       redirect_to tourdates_path
     else
       render 'edit'
@@ -42,7 +42,7 @@ class TourdatesController < ApplicationController
   end
 
   def tourdate_params
-    params.require(:tourdate).permit(:date, :city, :venue, :time)
+    params.require(:tourdate).permit(:date, :city, :venue, :time, :address, :tickets)
   end
 
 end

@@ -36,6 +36,8 @@
            <th>City</th>
            <th>Venue</th>
            <th>Time</th>
+           <th>Map</th>
+           <th>Details</th>
           </tr>
         </thead>
         <%@tourdate.each do |tourdate| %>
@@ -44,6 +46,11 @@
            <td><%= tourdate.city %></td>
            <td><%= tourdate.venue %></td>
            <td><%= tourdate.time %></td>
+           <td>
+            <% if tourdate.address != "" %>
+              <%= link_to "Map", ('http://maps.google.com/?q=' + tourdate.address) %>
+            <% end %>
+           </td>
            </tr>
         <% end %>
         </table>
