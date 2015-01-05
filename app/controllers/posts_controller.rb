@@ -24,10 +24,6 @@ class PostsController < ApplicationController
 
   end
 
-  def post_params
-    params.require(:post).permit(:date, :title, :body)
-  end
-
   def edit
     @post = Post.find(params[:id])
   end
@@ -45,6 +41,10 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
     @post.destroy
     redirect_to posts_path
+  end
+
+  def post_params
+    params.require(:post).permit(:date, :title, :body)
   end
     
 end

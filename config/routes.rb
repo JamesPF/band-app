@@ -44,6 +44,13 @@ BandApp::Application.routes.draw do
   patch 'vids/:id' => 'vids#update', as: :update_vid
   delete 'vids/:id' => 'vids#destroy', as: :delete_vid
 
+  # These routes are for creating a bio (details)
+  get 'descriptions/new' => 'descriptions#new', as: :adddescription
+  post 'descriptions/' => 'descriptions#create', as: :new_description
+  get 'descriptions/:id/edit' => 'descriptions#edit', as: :edit_description
+  patch 'descriptions/:id' => 'descriptions#update', as: :update_description
+  delete 'descriptions/:id' => 'descriptions#destroy', as: :delete_description
+
   #These routes determine the front end
   root 'application#index'
   get 'about/' => 'application#about', as: :about

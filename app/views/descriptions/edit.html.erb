@@ -1,0 +1,25 @@
+<%= link_to "Log Out", logout_path %>
+<h1>Create a Bio</h1>
+
+  <div class="page-contents">
+    <div class="back-button">
+      <%= link_to 'Back to Posts', posts_path %>
+    </div>
+    <%= form_for(@description, :url => {:action => :create, :controller => :descriptions} ) do |d| %>
+  <div class="field">
+    <%= d.label :header %><br>
+    <%= d.text_field :header %>
+  </div>
+  <div class="field">
+    <%= d.label :body %><br>
+    <%= d.text_field :body %>
+  </div>
+  <div class="text-area">
+    <%= d.label :image %><br>
+    <%= d.text_area :image %>
+  </div>
+  <div class="actions">
+    <%= d.submit "Create Bio" %>
+  </div>
+<% end %>
+</div>
