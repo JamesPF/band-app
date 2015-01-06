@@ -29,7 +29,8 @@
       <div class="content">
         <% if @descriptions %>
           <h1><%= @descriptions.header %></h1>
-          <p><%= @descriptions.body %></p>
+            <%= image_tag @descriptions.avatar, class: "about-image" %>
+          <p class="about"><%= @descriptions.body %></p>
         <% end %>
       </div>
     </div>

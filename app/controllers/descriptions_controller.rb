@@ -24,7 +24,7 @@ class DescriptionsController < ApplicationController
 
   def update
     @description = Description.find(params[:id])
-    if @description.update_attributes(params.require(:description).permit(:header, :body, :check_box))
+    if @description.update_attributes(params.require(:description).permit(:header, :body, :avatar, :check_box))
       redirect_to descriptions_path
     else
       render 'edit'
@@ -38,7 +38,7 @@ class DescriptionsController < ApplicationController
   end
 
   def description_params
-    params.require(:description).permit(:header, :body, :check_box)
+    params.require(:description).permit(:header, :body, :avatar, :check_box)
   end
 
 end
