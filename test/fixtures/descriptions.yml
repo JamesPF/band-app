@@ -3,9 +3,9 @@
 one:
   header: MyString
   body: MyString
-  image: MyString
+  check_box: 1
 
 two:
   header: MyString
   body: MyString
-  image: MyString
+  check_box: 1

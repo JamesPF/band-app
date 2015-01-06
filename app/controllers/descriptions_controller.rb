@@ -7,7 +7,7 @@ class DescriptionsController < ApplicationController
   def create
     @description = Description.new(description_params)
 
-    if description.save
+    if @description.save
       redirect_to home_path
     else
       redirect_to @description, notice: 'There was an error creating your bio.'
@@ -15,12 +15,12 @@ class DescriptionsController < ApplicationController
   end
 
   def edit
-    @description = Description.find(params[:id])
+    @description = Description.order("created_at").last
   end
 
   def update
     @description = Description.find(params[:id])
-    if @description.update_attributes(params.require(:description).permit(:header, :body, :image))
+    if @description.update_attributes(params.require(:description).permit(:header, :body, :check_box))
       redirect_to home_path
     else
       render 'edit'
@@ -34,7 +34,7 @@ class DescriptionsController < ApplicationController
   end
 
   def description_params
-    params.require(:description).permit(:header, :body, :image)
+    params.require(:description).permit(:header, :body, :check_box)
   end
 
 end
