@@ -1,0 +1,26 @@
+<head>
+  <link rel="stylesheet" type="text/css" href="../../assets/stylesheets/backend-style.css" >
+</head>
+<body>
+<%= link_to "Log Out", logout_path %>
+  <h1>Update Your 'About' Page</h1>
+  <div class="page-contents">
+    <div class="new-entry">
+      <%= link_to "Create ", add_description_path %>
+    </div>
+    <div class="nav-button">
+      <%= link_to 'Edit News Posts', home_path %>
+    </div>
+    <div class="vid-list">
+      <table>
+        <% if @description %>
+        <tr>
+          <td><%= @description.header.truncate(50) %></td>
+          <td><%= link_to 'Edit Bio', edit_description_path(@description) %></td>
+        </tr>
+        <% end %>
+      </table>
+    </div>
+  </div>
+
+</body>

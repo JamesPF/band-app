@@ -45,9 +45,10 @@ BandApp::Application.routes.draw do
   delete 'vids/:id' => 'vids#destroy', as: :delete_vid
 
   # These routes are for creating a bio (details)
+  get 'descriptions/' => 'descriptions#index', as: :descriptions
   get 'descriptions/new' => 'descriptions#new', as: :add_description
   post 'descriptions/' => 'descriptions#create', as: :new_description
-  get 'descriptions/edit' => 'descriptions#edit', as: :edit_description
+  get 'descriptions/:id/edit' => 'descriptions#edit', as: :edit_description
   patch 'descriptions/:id' => 'descriptions#update', as: :update_description
   delete 'descriptions/:id' => 'descriptions#destroy', as: :delete_description
 
