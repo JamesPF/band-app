@@ -196,6 +196,10 @@ a, a:visited, a:hover, a:active {
   margin-right: 15px;
 }
 
+.about-left {
+  max-width: 50%;
+}
+
 .about-image {
   float: right;
   max-width: 50%;

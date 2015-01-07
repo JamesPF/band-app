@@ -1,7 +1,7 @@
 class VideoController < ApplicationController
 
   def index
-    @vid = Vid.all
+    @vid = Vid.all.reverse
   end
 
 end

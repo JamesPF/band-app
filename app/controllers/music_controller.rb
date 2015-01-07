@@ -1,7 +1,7 @@
 class MusicController < ApplicationController
 
   def index
-    @song = Song.all
+    @song = Song.all.reverse
   end
 
 end
