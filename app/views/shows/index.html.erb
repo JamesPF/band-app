@@ -42,7 +42,7 @@
         </thead>
         <%@tourdate.each do |tourdate| %>
           <tr>
-            <td><%= tourdate.date %></td>
+            <td><%= Date.parse(tourdate.date).strftime('%m/%d/%Y') %></td>
             <td><%= tourdate.city %></td>
             <td><%= tourdate.venue %></td>
             <td><%= tourdate.time %></td>

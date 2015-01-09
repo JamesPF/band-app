@@ -8,7 +8,7 @@
     <%= form_for(@tourdate, :url => {:action => :update, :controller => :tourdates}) do |f| %>
     <div class="field">
       <%= f.label :date %><br>
-      <%= f.text_field :date, placeholder: 'DD/MM/YY' %>
+      <%= f.date_field :date, placeholder: 'DD/MM/YY' %>
     </div>
     <div class="field">
       <%= f.label :city %><br>

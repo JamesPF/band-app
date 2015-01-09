@@ -1,7 +1,7 @@
 class TourdatesController < ApplicationController
 
   def index
-    @tourdate = Tourdate.all
+    @tourdate = Tourdate.all.order([:date])
   end
 
   def show
