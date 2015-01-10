@@ -1,9 +1,35 @@
-<head>
-  <link rel="stylesheet" type="text/css" href="../../assets/stylesheets/backend-style.css" >
-</head>
-<body>
-<%= link_to "Log Out", logout_path %>
+<div class="top-bar">
+  <p><%= link_to "Log Out", logout_path %></p>
+</div>
+<div class="admin-container">
   <h1>Manage Your Songs</h1>
+  <div class="side-menu">
+    <%= link_to descriptions_path do %>
+      <div class="option">
+        <p>Artist Bio</p>
+      </div>
+    <% end %>
+    <%= link_to posts_path do %>
+      <div class="option">
+        <p>News Posts</p>
+      </div>
+    <% end %>
+    <%= link_to tourdates_path do %>
+      <div class="option">
+        <p>Shows</p>
+      </div>
+    <% end %>
+    <%= link_to songs_path do %>
+      <div class="option">
+        <p>Music</p>
+      </div>
+    <% end %>
+    <%= link_to vids_path do %>
+      <div class="option">
+        <p>Videos</p>
+      </div>
+    <% end %>
+  </div>
   <div class="page-contents">
     <div class="new-entry">
       <%= link_to "Add New Track", addsong_path %>
@@ -28,5 +54,4 @@
       </table>
     </div>
   </div>
-
-</body>
+</div>

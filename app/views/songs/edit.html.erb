@@ -1,22 +1,52 @@
-<%= link_to "Log Out", logout_path %>
-<h1>Edit Track</h1>
-
-<div class="page-contents">
-  <div class="back-button">
-    <%= link_to 'Back to Tracks', songs_path %>
+<div class="top-bar">
+  <p><%= link_to "Log Out", logout_path %></p>
+</div>
+<div class="admin-container">
+  <h1>Edit Track</h1>
+  <div class="side-menu">
+    <%= link_to descriptions_path do %>
+      <div class="option">
+        <p>Artist Bio</p>
+      </div>
+    <% end %>
+    <%= link_to posts_path do %>
+      <div class="option">
+        <p>News Posts</p>
+      </div>
+    <% end %>
+    <%= link_to tourdates_path do %>
+      <div class="option">
+        <p>Shows</p>
+      </div>
+    <% end %>
+    <%= link_to songs_path do %>
+      <div class="option">
+        <p>Music</p>
+      </div>
+    <% end %>
+    <%= link_to vids_path do %>
+      <div class="option">
+        <p>Videos</p>
+      </div>
+    <% end %>
   </div>
-    <%= form_for(@song, :url => {:action => :update, :controller => :songs}) do |s| %>
-    <div class="field">
-      <%= s.label :title %><br>
-      <%= s.text_field :title, placeholder: 'Title' %>
+  <div class="page-contents">
+    <div class="back-button">
+      <%= link_to 'Back to Tracks', songs_path %>
     </div>
-    <div class="field">
-      <%= s.label :code %><br>
-      <%= s.text_area :code %>
-    </div>
-    <br>
-    <div class="actions">
-      <%= s.submit "Update Track" %>
-    </div>
-  <% end %>
+      <%= form_for(@song, :url => {:action => :update, :controller => :songs}) do |s| %>
+      <div class="field">
+        <%= s.label :title %><br>
+        <%= s.text_field :title, placeholder: 'Title' %>
+      </div>
+      <div class="field">
+        <%= s.label :code %><br>
+        <%= s.text_area :code %>
+      </div>
+      <br>
+      <div class="actions">
+        <%= s.submit "Update Track" %>
+      </div>
+    <% end %>
+  </div>
 </div>
