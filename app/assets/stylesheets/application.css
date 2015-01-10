@@ -211,6 +211,38 @@ a, a:visited, a:hover, a:active {
 
 /* THE FOLLOWING IS FOR THE ADMIN
 PAGES OF THE WEBSITE */
+.top-bar {
+  position: absolute;
+  background-color: #C2DAFF;
+  height: 40px;
+  min-width: 100%;
+  margin-left: -8px;
+  margin-top: -21px;
+  overflow: hidden;
+}
+
+.top-bar p {
+  font-family: Arial;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.admin-container {
+  position: relative;
+  width: 100%;
+  min-height: 100%;
+  top: 40px;
+}
+
+.side-menu {
+  background-color: #C2DAFF;
+  width: 200px;
+  margin-left: -8px;
+  float: left;
+  height: 168px;
+  border-radius: 3px;
+}
+
 h1 {
   text-align: center;
   font-family: Arial;
@@ -287,13 +319,37 @@ h1 {
 
 
 .options {
-  background-color: green;
-  width: 40%;
+  background-color: #C2DAFF;
+  width: 300px;
+  height: 168px;
   margin: 0 auto;
-  border-radius: 5%;
+  margin-top: 40px;
+  overflow: hidden;
+  border-radius: 3px;
 }
 
-.left {
+.option {
+  position: relative;
+  background-color: #7EBFFF;
+  margin-top: -24px;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 3px;
+}
+
+.option p {
+  color: white;
+  font-family: Arial;
+  font-size: 26px;
+  margin-left: 5px;
+}
+
+.option:hover {
+  background-color: #8FCFFF;
+}
+
+/*.left {
   background-color: orange;
   width: 40%;
   float: left;
@@ -315,7 +371,7 @@ h1 {
   font-family: Arial;
   font-size: 30px;
   text-align: center;
-}
+}*/
 
 .login-info {
   background-color: orange;
