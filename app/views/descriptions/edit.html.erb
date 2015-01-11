@@ -50,12 +50,14 @@
         <%= d.label :photo %><br>
         <%= d.file_field :avatar %>
       </div>
+      <br>
       <div class="text-area">
         <%= d.label :text_wrap %><br>
         <%= d.check_box :check_box %>
       </div>
+      <br>
       <div class="actions">
-        <%= d.submit "Update Bio" %>
+        <%= d.submit "Update Bio", class: "submit-button" %>
       </div>
     <% end %>
     </div>

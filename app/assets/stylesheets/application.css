@@ -278,14 +278,6 @@ h1 {
   padding-left: 7px;
 }
 
-.page-contents {
-  background-color: #DDDDDD;
-  width: 50%;
-  height: 75%;
-  margin: 0 auto;
-  border-radius: 5px;
-}
-
 #create-bio {
   width: 170px;
   min-height: 20px;
@@ -341,7 +333,6 @@ hr {
 }
 
 .new-entry {
-/*  position: absolute;*/
   font-family: Arial;
   padding-left: 8px;
   padding-top: 5px;
@@ -357,8 +348,16 @@ hr {
   padding-top: 5px;
 }
 
+.page-contents {
+  background-color: rgba(220,220,220,0.85);
+  width: 50%;
+  height: 75%;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
 .page-contents table {
-  background-color: #888888;
+  background-color: rgba(128,128,128,0.2);
   position: relative;
   width: 100%;
   margin-top: 10px;
@@ -414,6 +413,15 @@ textarea {
   padding-left: 10px;
   padding-bottom: 10px;
   margin-top: -7px;
+}
+
+.submit-button {
+  background-color: rgba(20,20,20,0.8);
+  color: white;
+}
+
+.submit-button:hover {
+  cursor: pointer;
 }
 
 .back-button {
