@@ -1,5 +1,5 @@
 <div class="top-bar">
-  <p><%= link_to "Log Out", logout_path %></p>
+  <p><%= link_to "Log Out", logout_path %> | <%= link_to "Home", home_path %></p>
 </div>
 <div class="admin-container">
   <h1>Edit Your Shows</h1>
@@ -34,10 +34,6 @@
       <div class="new-entry">
       <%= link_to "Create New Show", new_path %>
     </div>
-    <div class="nav-button">
-      <%= link_to 'Edit News Posts', posts_path %>
-    </div>
-
     <div class="date-list">
       <table>
       <thead>

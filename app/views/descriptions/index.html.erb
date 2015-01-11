@@ -1,5 +1,5 @@
 <div class="top-bar">
-  <p><%= link_to "Log Out", logout_path %></p>
+  <p><%= link_to "Log Out", logout_path %> | <%= link_to "Home", home_path %></p>
 </div>
 <div class="admin-container">
   <h1>Update Your 'About' Page</h1>
@@ -30,22 +30,15 @@
       </div>
     <% end %>
   </div>
-  <div class="page-contents">
-    <div class="new-entry">
-      <%= link_to "Create ", add_description_path %>
+  <div id="create-bio">
+    <div class="bio-button" id="bio-top">
+      <%= link_to "Create New Bio", add_description_path %>
     </div>
-    <div class="nav-button">
-      <%= link_to 'Edit News Posts', home_path %>
-    </div>
-    <div class="vid-list">
-      <table>
-        <% if @description %>
-        <tr>
-          <td><%= @description.header.truncate(50) %></td>
-          <td><%= link_to 'Edit Bio', edit_description_path(@description) %></td>
-        </tr>
-        <% end %>
-      </table>
-    </div>
+    <hr>
+      <% if @description %>
+        <div class="bio-button" id="bio-bottom">
+          <%= link_to 'Edit Current Bio', edit_description_path(@description) %>
+        </div>
+      <% end %>
   </div>
 </div>

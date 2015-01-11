@@ -248,20 +248,72 @@ h1 {
   font-family: Arial;
 }
 
+.element-title {
+  padding-left: 7px;
+}
+
 .page-contents {
-  background-color: orange;
+  background-color: #DDDDDD;
   width: 50%;
   height: 75%;
   margin: 0 auto;
   border-radius: 5px;
 }
 
-.new-entry {
-  position: absolute;
+#create-bio {
+  width: 170px;
+  min-height: 20px;
+  margin: 0 auto;
+  border-radius: 5px;
+}
+
+.bio-button {
+  position: relative;
+  width: 95%;
   font-family: Arial;
+  font-size: 20px;
+  text-align: center;
+  padding-top: 5px;
   padding-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#bio-top {
+  background-color: #DDDDDD;
+  width: 100%;
+  margin-bottom: -2px;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+#bio-top:hover {
+  background-color: #BBBBBB;
+}
+
+#bio-bottom {
+  background-color: #888888;
+  width: 100%;
+  margin-top: -4px;
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+
+#bio-bottom:hover {
+  background-color: #BBBBBB;
+}
+
+hr {
+  margin-top: 2px;
+  margin-bottom: 4px;
+}
+
+.new-entry {
+/*  position: absolute;*/
+  font-family: Arial;
   padding-left: 8px;
   padding-top: 5px;
+  margin-bottom: -7px;
 }
 
 .nav-button {
@@ -274,7 +326,7 @@ h1 {
 }
 
 .page-contents table {
-  background-color: red;
+  background-color: #888888;
   position: relative;
   width: 100%;
   margin-top: 10px;
@@ -316,7 +368,6 @@ h1 {
   padding-bottom: 5px;
   font-family: Arial;
 }
-
 
 .options {
   background-color: #C2DAFF;
