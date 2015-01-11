@@ -1,35 +1,37 @@
-<div class="top-bar">
-  <p><%= link_to "Log Out", logout_path %></p>
-</div>
-<div class="admin-container">
-  <div class="admin-header">
-    <h1>What Do You Want To Update?</h1>
+<div class="admin-background">
+  <div class="top-bar">
+    <p><%= link_to "Log Out", logout_path %></p>
   </div>
-  <div class="options">
-    <%= link_to descriptions_path do %>
-      <div class="option">
-        <p>Artist Bio</p>
-      </div>
-    <% end %>
-    <%= link_to posts_path do %>
-      <div class="option">
-        <p>News Posts</p>
-      </div>
-    <% end %>
-    <%= link_to tourdates_path do %>
-      <div class="option">
-        <p>Shows</p>
-      </div>
-    <% end %>
-    <%= link_to songs_path do %>
-      <div class="option">
-        <p>Music</p>
-      </div>
-    <% end %>
-    <%= link_to vids_path do %>
-      <div class="option">
-        <p>Videos</p>
-      </div>
-    <% end %>
+  <div class="admin-container">
+    <div class="admin-header">
+      <h1>Choose an Option...</h1>
+    </div>
+    <div class="options">
+      <%= link_to descriptions_path do %>
+        <div class="option">
+          <p>Artist Bio</p>
+        </div>
+      <% end %>
+      <%= link_to posts_path do %>
+        <div class="option">
+          <p>News Posts</p>
+        </div>
+      <% end %>
+      <%= link_to tourdates_path do %>
+        <div class="option">
+          <p>Shows</p>
+        </div>
+      <% end %>
+      <%= link_to songs_path do %>
+        <div class="option">
+          <p>Music</p>
+        </div>
+      <% end %>
+      <%= link_to vids_path do %>
+        <div class="option">
+          <p>Videos</p>
+        </div>
+      <% end %>
+    </div>
   </div>
 </div>

@@ -211,13 +211,24 @@ a, a:visited, a:hover, a:active {
 
 /* THE FOLLOWING IS FOR THE ADMIN
 PAGES OF THE WEBSITE */
-.top-bar {
+.admin-background {
+/*  background-color: orange;*/
+  background-image: url(red-rocks-panorama.jpg);
+  background-size: cover;
+  background-position: -300px;
   position: absolute;
-  background-color: #C2DAFF;
+  width: 100%;
+  min-height: 100%;
+  margin-left: -8px;
+}
+
+.top-bar {
+  background-color: #CCC;
   height: 40px;
   min-width: 100%;
   margin-left: -8px;
-  margin-top: -21px;
+  margin-top: -8px;
+  border-bottom: 1px solid #BBB;
   overflow: hidden;
 }
 
@@ -225,6 +236,7 @@ PAGES OF THE WEBSITE */
   font-family: Arial;
   margin-left: 10px;
   margin-top: 10px;
+  padding-left: 5px;
 }
 
 .admin-container {
@@ -234,10 +246,24 @@ PAGES OF THE WEBSITE */
   top: 40px;
 }
 
+.admin-header {
+  background-color: rgba(30,30,30,0.6);
+  width: 350px;
+  min-height: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.admin-header h1 {
+  padding-top: 4px;
+  color: white;
+}
+
 .side-menu {
   background-color: #C2DAFF;
   width: 200px;
-  margin-left: -8px;
   float: left;
   height: 168px;
   border-radius: 3px;
@@ -308,6 +334,12 @@ hr {
   margin-bottom: 4px;
 }
 
+.bio-text {
+  width: 90%;
+  height: 300px;
+  overflow: scroll;
+}
+
 .new-entry {
 /*  position: absolute;*/
   font-family: Arial;
@@ -348,11 +380,34 @@ hr {
   padding-top: 5px;
 }
 
+form {
+  font-family: Arial;
+  font-size: 16px;
+}
+
+input {
+  font-family: Arial;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+  border-radius: 3px;
+}
+
 .text-area {
   position: relative;
   width: 75%;
   padding-left: 10px;
   padding-bottom: 10px;
+}
+
+textarea {
+  max-width: 640px;
+  max-height: 260px;
+  border: none;
+  border-radius: 5px;
+  overflow: scroll;
+  font-family: Arial;
+  font-size: 16px;
 }
 
 .actions {
@@ -400,30 +455,6 @@ hr {
   background-color: #8FCFFF;
 }
 
-/*.left {
-  background-color: orange;
-  width: 40%;
-  float: left;
-}
-
-.left p {
-  font-family: Arial;
-  font-size: 30px;
-  text-align: center;
-}
-
-.right {
-  background-color: orange;
-  width: 40%;
-  float: right;
-}
-
-.right p {
-  font-family: Arial;
-  font-size: 30px;
-  text-align: center;
-}*/
-
 .login-info {
   background-color: orange;
   width: 15%;
@@ -438,6 +469,18 @@ hr {
 
 .login-info .actions {
   margin-top: 15px;
+}
+
+.song-link {
+  width: 90%;
+  min-height: 100px;
+  max-height: 100px;
+}
+
+.vid-link {
+  width: 90%;
+  min-height: 50px;
+  max-height: 50px;
 }
 
 

@@ -1,8 +1,11 @@
+<div class="admin-background">
 <div class="top-bar">
   <p><%= link_to "Log Out", logout_path %> | <%= link_to "Home", home_path %></p>
 </div>
 <div class="admin-container">
-  <h1>Editing Post</h1>
+  <div class="admin-header">
+    <h1>Editing Post</h1>
+  </div>
   <div class="side-menu">
     <%= link_to descriptions_path do %>
       <div class="option">
@@ -52,3 +55,4 @@
       </div>
     <% end %>
   </div>
+</div>

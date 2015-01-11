@@ -1,59 +1,63 @@
-<div class="top-bar">
-  <p><%= link_to "Log Out", logout_path %> | <%= link_to "Home", home_path %></p>
-</div>
-<div class="admin-container">
-  <h1>Edit Your Posts</h1>
-  <div class="side-menu">
-    <%= link_to descriptions_path do %>
-      <div class="option">
-        <p>Artist Bio</p>
-      </div>
-    <% end %>
-    <%= link_to posts_path do %>
-      <div class="option">
-        <p>News Posts</p>
-      </div>
-    <% end %>
-    <%= link_to tourdates_path do %>
-      <div class="option">
-        <p>Shows</p>
-      </div>
-    <% end %>
-    <%= link_to songs_path do %>
-      <div class="option">
-        <p>Music</p>
-      </div>
-    <% end %>
-    <%= link_to vids_path do %>
-      <div class="option">
-        <p>Videos</p>
-      </div>
-    <% end %>
+<div class="admin-background">
+  <div class="top-bar">
+    <p><%= link_to "Log Out", logout_path %> | <%= link_to "Home", home_path %></p>
   </div>
-  <div class="page-contents">
-    <div class="new-entry">
-      <%= link_to 'Create New Post', addpost_path %>
+  <div class="admin-container">
+    <div class="admin-header">
+      <h1>Manage Your Posts</h1>
     </div>
-    <div class="post-list">
-      <table>
-      <thead>
-        <tr>
-        <th>Date</th>
-        <th>Title</th>
-        <th>Content</th>
-        </tr>
-        </thead>
-        <%@post.each do |post| %>
-        <tr>
-        <td><%= post.date %></td>
-        <td><%= post.title.truncate(50) %></td>
-        <td><%= post.body.truncate(25) %></td>
-        <td><%= link_to 'Show', post_path(post) %></td>
-          <td><%= link_to 'Edit', edit_post_path(post) %></td>
-          <td><%= link_to 'Delete', delete_post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        </tr>
+    <div class="side-menu">
+      <%= link_to descriptions_path do %>
+        <div class="option">
+          <p>Artist Bio</p>
+        </div>
       <% end %>
-      </table>
+      <%= link_to posts_path do %>
+        <div class="option">
+          <p>News Posts</p>
+        </div>
+      <% end %>
+      <%= link_to tourdates_path do %>
+        <div class="option">
+          <p>Shows</p>
+        </div>
+      <% end %>
+      <%= link_to songs_path do %>
+        <div class="option">
+          <p>Music</p>
+        </div>
+      <% end %>
+      <%= link_to vids_path do %>
+        <div class="option">
+          <p>Videos</p>
+        </div>
+      <% end %>
+    </div>
+    <div class="page-contents">
+      <div class="new-entry">
+        <%= link_to 'Create New Post', addpost_path %>
+      </div>
+      <div class="post-list">
+        <table>
+        <thead>
+          <tr>
+          <th>Date</th>
+          <th>Title</th>
+          <th>Content</th>
+          </tr>
+          </thead>
+          <%@post.each do |post| %>
+          <tr>
+          <td><%= post.date %></td>
+          <td><%= post.title.truncate(50) %></td>
+          <td><%= post.body.truncate(25) %></td>
+          <td><%= link_to 'Preview', post_path(post) %></td>
+            <td><%= link_to 'Edit', edit_post_path(post) %></td>
+            <td><%= link_to 'Delete', delete_post_path(post), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+        </table>
+      </div>
     </div>
   </div>
 </div>
