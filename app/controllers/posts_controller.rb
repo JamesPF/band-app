@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
 
   def index
-    @post = Post.all
+    @post = Post.all.order([:date]).reverse
   end
 
   def show

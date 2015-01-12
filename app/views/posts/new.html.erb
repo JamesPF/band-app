@@ -40,7 +40,7 @@
       <%= form_for(@post, :url => {:action => :create, :controller => :posts} ) do |p| %>
         <div class="field">
           <%= p.label :date %><br>
-          <%= p.text_field :date, placeholder: 'MM/DD/YY' %>
+          <%= p.date_field :date, placeholder: 'MM/DD/YY' %>
         </div>
         <div class="field">
           <%= p.label :title %><br>

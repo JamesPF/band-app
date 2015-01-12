@@ -48,7 +48,7 @@
           </thead>
           <%@post.each do |post| %>
           <tr>
-          <td><%= post.date %></td>
+          <td><%= Date.parse(post.date).strftime('%m/%d/%Y') %></td>
           <td><%= post.title.truncate(50) %></td>
           <td><%= post.body.truncate(25) %></td>
           <td><%= link_to 'Preview', post_path(post) %></td>
