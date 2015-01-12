@@ -20,12 +20,24 @@
         </div>
         <div class="navigation">
           <ul>
-            <li><%= link_to "About", about_path %></li>
-            <li><%= link_to "News", news_path %></li>
-            <li><%= link_to "Shows", shows_path %></li>
-            <li><%= link_to "Music", music_path %></li>
-            <li><%= link_to "Video", video_path %></li>
-            <li><%= link_to "Photos", photos_path %></li>
+            <%= link_to about_path do %>
+              <li>About</li>
+            <% end %>
+            <%= link_to news_path do %>
+              <li>News</li>
+            <% end %>
+            <%= link_to shows_path do %>
+              <li>Shows</li>
+            <% end %>
+            <%= link_to music_path do %>
+              <li>Music</li>
+            <% end %>
+            <%= link_to video_path do %>
+              <li>Video</li>
+            <% end %>
+            <%= link_to photos_path do %>
+              <li>Photos</li>
+            <% end %>
           </ul>
         </div>
       </div>

@@ -89,12 +89,16 @@
 
 .navigation ul li {
   display: inline;
-  background-color: gray;
+  background-color: #ccc;
   margin-right: 0px;
   font-size: 26px;
   font-family: Arial;
   padding-left: 5px;
-  padding-right: 5px;  
+  padding-right: 5px;
+  border-bottom-right-radius: 7px;
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 7px;
+  border-top-right-radius: 3px;
 }
 
 a, a:visited, a:hover, a:active {
@@ -592,7 +596,7 @@ textarea {
 @media (max-width: 767px) {
     .header {
         background-color: #d8344f;
-        height: 450px;
+        height: 505px;
         margin-top: -60px;
     }
 
@@ -627,13 +631,15 @@ textarea {
 
     .navigation ul li {
         display: block;
-        background-color: gray;
         margin-right: 20px;
+        margin-top: 5px;
         font-size: 20px;
+        line-height: 30px;
         font-family: Arial;
         padding-left: 5px;
         padding-right: 5px;
         padding-top: 5px;
+        border-radius: 3px;
     }
 
     .content {
@@ -654,7 +660,7 @@ textarea {
 @media (max-width: 480px) {
     .header {
       background-color: #d8344f;
-      height: 420px;
+      height: 500px;
       margin-top: -60px;
     }
 
@@ -690,7 +696,6 @@ textarea {
 
     .navigation ul li {
     display: block;
-    background-color: gray;
     margin-right: 20px;
     font-size: 20px;
     font-family: Arial;
