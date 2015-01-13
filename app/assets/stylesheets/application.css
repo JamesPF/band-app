@@ -190,21 +190,27 @@ a, a:visited, a:hover, a:active {
 .tour-dates {
   position: relative;
   min-height: 200px;
-  width: 50%;
-  background-color: red;
+  width: 720px;
+  background-color: rgba(216,52,79,0.9);
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  border-radius: 10px;
 }
 
 .tour-dates h1 {
-  padding-top: 10px;
+  font-size: 36px;
+  font-family: Helvetica;
+  color: #111;
 }
 
 .tour-dates table {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 30px;
 }
 
 .tour-dates th {
@@ -617,6 +623,10 @@ textarea {
         height: 88px;
         background-size: 100%;
     }
+
+    .video iframe {
+      width: 100%;
+    }
 }
 
 /* FOR IPADS */
@@ -714,12 +724,26 @@ textarea {
       max-width: 80%;
     }
 
+    .tour-dates {
+      width: 90%;
+    }
+
+    .video iframe {
+      height: 236px;
+      width: 420px;
+    }
+
 }
 
 @media (max-width: 530px) {
     .logo {
       width: 385px;
       height: 88px;
+    }
+
+    .video iframe {
+      height: 157px;
+      width: 265px;
     }
 }
 
@@ -774,6 +798,10 @@ textarea {
     .content {
       position: relative; 
       width: 80%;
+    }
+
+    .tour-dates table {
+      width: 85%;
     }
 
 }
