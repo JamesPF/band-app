@@ -1,5 +1,7 @@
 class TourdatesController < ApplicationController
 
+  before_filter :authorize
+
   def index
     @tourdate = Tourdate.all.order([:date])
   end

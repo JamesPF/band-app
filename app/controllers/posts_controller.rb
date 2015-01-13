@@ -1,5 +1,7 @@
 class PostsController < ApplicationController
 
+  before_filter :authorize
+
   def index
     @post = Post.all.order([:date]).reverse
   end

@@ -1,5 +1,7 @@
 class VidsController < ApplicationController
 
+  before_filter :authorize
+
   def index
     @vid = Vid.all
   end

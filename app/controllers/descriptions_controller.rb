@@ -1,5 +1,7 @@
 class DescriptionsController < ApplicationController
 
+  before_filter :authorize
+
   def index
     @description = Description.last
   end
