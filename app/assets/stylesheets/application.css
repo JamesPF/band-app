@@ -117,28 +117,74 @@ a, a:visited, a:hover, a:active {
   position: relative;
   min-height: 500px;
   width: 70%;
-  background-color: red;
+  background-color: rgba(216,52,79,0.9);
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+  margin-bottom: 40px;
   overflow: hidden;
+  border-radius: 10px;
+}
+
+.content h1 {
+  font-size: 36px;
+  font-family: Helvetica;
+  color: #111;
+}
+
+.content p {
+  font-family: Arial;
+  margin-left: 12px;
+  margin-right: 15px;
 }
 
 .news-content {
   position: relative;
-  height: 500px;
+  min-height: 500px;
   width: 60%;
-  background-color: red;
+  background-color: rgba(216,52,79,0.9);
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px;
+  margin-bottom: 40px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.news-content h1 {
+  font-size: 36px;
+  font-family: Helvetica;
+  color: #111;
 }
 
 .news-post {
-  background-color: orange;
+  background-color: #ccc;
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 5px;
+}
+
+.news-post h2 {
+  display: inline-block;
+  font-family: Helvetica;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+
+.news-post h3 {
+  display: inline-block;
+  font-family: Arial;
+  margin-left: 10px;
+  margin-top: 2px;
+}
+
+.news-post p {
+  font-family: Arial;
+  margin-left: 10px;
+  margin-right: 15px;
+  margin-top: -15px;
+  padding-bottom: 8px;
 }
 
 .tour-dates {
@@ -216,9 +262,12 @@ a, a:visited, a:hover, a:active {
 .about {
   margin-left: 12px;
   margin-right: 15px;
+  font-family: Arial;
 }
 
 .about-left {
+/*  margin-left: 12px;
+  margin-right: 15px;*/
   max-width: 50%;
 }
 
@@ -226,7 +275,9 @@ a, a:visited, a:hover, a:active {
   float: right;
   max-width: 50%;
   margin-left: 15px;
+  margin-right: 20px;
   margin-bottom: 30px;
+  border-radius: 3px;
 }
 
 
@@ -522,6 +573,10 @@ textarea {
     .navigation ul li {
         font-size: 24px;
     }
+
+    .about-left {
+      max-width: 100%;
+    }
 }
 
 @media (max-width: 1205px) {
@@ -590,6 +645,10 @@ textarea {
         margin-right: 4px;
     }
 
+    .news-content {
+      width: 90%;
+    }
+
 }
 
 /* FOR SMALL TABLETS */
@@ -645,6 +704,14 @@ textarea {
     .content {
         position: relative; 
         width: 90%;
+    }
+
+    .about-image {
+      float: none;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 80%;
     }
 
 }

@@ -48,10 +48,10 @@
         <div class="post-list">
           <% @post.each do |post| %>
             <div class="news-post">
-              <%= Date.parse(post.date).strftime('%m/%d/%Y') %>
-              <%= post.title %>
+              <h3><%= Date.parse(post.date).strftime('%m/%d/%Y') %></h3>
+              <h2><%= post.title %></h2>
               <br>
-              <%= post.body %>
+              <p><%= post.body %></p>
             </div>
             <br><br>
           <% end %>
