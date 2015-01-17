@@ -59,7 +59,7 @@ development:
 production:
   sessions:
     default:
-      uri: <%= ENV['MONGOLAB_URI'] %>
+      uri: 'mongodb://heroku_app33213768:640r2mv77jpvuo65duehi7mb42@ds031551.mongolab.com:31551/heroku_app33213768'
 
 test:
   sessions:
